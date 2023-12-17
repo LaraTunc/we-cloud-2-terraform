@@ -7,6 +7,8 @@ terraform {
   }
 }
 
+variable "AWS_REGION" {}
+variable "PROFILE" {}
 provider "aws" {
     region = var.AWS_REGION 
     profile = var.PROFILE 
@@ -195,3 +197,5 @@ resource "aws_instance" "api-server" {
 # Bonus - you can add the following components to your infrastructure but it is not mandatory.
 # Autoscaling group.
 # Application load balancer.
+
+#  lesson of 10/23 minute 54 > how to ssh into the db from the api server
